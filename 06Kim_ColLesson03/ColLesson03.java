@@ -42,9 +42,9 @@ public class ColLesson03 {
 					);
 		}
 
-		System.out.println(
+		/*System.out.println(
 				index
-				+"件登録しました。");
+				+"件登録しました。");*/
 		}
 		catch(Exception e){
 			e.printStackTrace();
@@ -55,5 +55,8 @@ public class ColLesson03 {
 						);
 			}
 		}
+		System.out.println(
+				index
+				+"件登録しました。");
 	}
 }
