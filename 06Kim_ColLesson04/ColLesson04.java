@@ -17,37 +17,30 @@ public class ColLesson04 {
 
 
 		int index = 0;
+
 		try{
 		while(true){
 			String input = sc.nextLine();
 			if(input.equals("e")){
 				break;
 			}
-			String[] tmp = input.split(" ");
-			words.setEnglish(tmp[0]);
-			words.setJapanese(tmp[1]);
+			String[] tmp = new String[2];
+			tmp = input.split(" ");
+			Word wd = new Word(tmp[0], tmp[1]);
+			words.add(wd);
 			index++;
 			System.out.println("次の単語を入力してください。\"e\"で終了します。");
 		}
 
-		for(int i = 0; i < index; i++){
-			System.out.println(
-					words[i].toString()
-					);
-		}
 
-		/*System.out.println(
-				index
-				+"件登録しました。");*/
 		}
-		catch(Exception e){
+		catch(ArrayIndexOutOfBoundsException e){
 			e.printStackTrace();
 			System.out.println("登録制限を超えました。登録済みのデータは以下になります。");
-			for(int j = 0; j < index; j++){
-				System.out.println(
-						words[j].toString()
-						);
-			}
+		}
+
+		for(Word wd : words){
+			System.out.println(wd);
 		}
 		System.out.println(
 				index

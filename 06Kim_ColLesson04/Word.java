@@ -4,9 +4,11 @@ public class Word{
 	private String english;
 	private String japanese;
 
-	Word()
-	{
+	public Word(String english, String japanese){
+		this.english = english;
+		this.japanese = japanese;
 	}
+
 
 	public String getEnglish(){
 		return this.english;
@@ -22,11 +24,6 @@ public class Word{
 		return this.japanese = japanese;
 	}
 
-
-	public Word(String english, String japanese){
-		this.english = english;
-		this.japanese = japanese;
-	}
 
 	public String toString(){
 		return ("英単語："

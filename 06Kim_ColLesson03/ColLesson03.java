@@ -36,25 +36,19 @@ public class ColLesson03 {
 			System.out.println("次の単語を入力してください。\"e\"で終了します。");
 		}
 
-		for(int i = 0; i < index; i++){
-			System.out.println(
-					words[i].toString()
-					);
-		}
 
-		/*System.out.println(
-				index
-				+"件登録しました。");*/
 		}
 		catch(Exception e){
 			e.printStackTrace();
 			System.out.println("登録制限を超えました。登録済みのデータは以下になります。");
-			for(int j = 0; j < index; j++){
-				System.out.println(
-						words[j].toString()
-						);
 			}
-		}
+
+		for(int i = 0; i < index; i++){
+			System.out.println(
+					words[i].toString()
+					);
+			}
+
 		System.out.println(
 				index
 				+"件登録しました。");
